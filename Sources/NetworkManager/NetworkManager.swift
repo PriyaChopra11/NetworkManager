@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol HttpProtocol {
+ public protocol HttpProtocol {
 
     func postRequest<T: Decodable>(with request: URLRequest,
                         completion: @escaping (Result<T, Error>) -> Void)
