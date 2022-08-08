@@ -11,6 +11,13 @@ import Foundation
 
     func postRequest<T: Decodable>(with request: URLRequest,
                         completion: @escaping (Result<T, Error>) -> Void)
+    static func getNetworkManager() -> HttpProtocol
+}
+
+extension HttpProtocol {
+    static func getNetworkManager() -> HttpProtocol {
+        NetworkManager()
+    }
 }
 
 class NetworkManager: HttpProtocol {
